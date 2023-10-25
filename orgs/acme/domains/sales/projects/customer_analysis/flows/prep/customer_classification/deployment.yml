@@ -10,20 +10,21 @@
 #
 # Below are examples of a job and a pipeline
 #
-# jobs:
-# - name: "mlopstemplate-training-job"
-#   new_cluster:
-#     spark_version: "10.3.x-cpu-ml-scala2.12"
-#     num_workers: 1
-#     node_type_id: "Standard_DS3_v2"
-#   notebook_task:
-#     notebook_path: "projects/mlopstemplate/flows/ml/training/model_training"
+jobs:
+- name: "mlopstemplate-training-job"
+  new_cluster: 
+    cluster_type_spv: billigcluster
+#    spark_version: "10.3.x-cpu-ml-scala2.12"
+#    num_workers: 1
+#    node_type_id: "Standard_DS3_v2"
+#  notebook_task:
+#    notebook_path: "projects/mlopstemplate/flows/ml/training/model_training"
 
 # pipelines:
 # - name: "mlopstemplate-data-pipeline"
 #   libraries:
 #   - notebook:
-#       path: "projects/mlopstemplate/flows/prep/data_pipeline"
+#       path: "projects/sales/flows/prep/data_pipeline"
 #   target: "dlt"
 #   clusters:
 #   - label: "default"
